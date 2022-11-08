@@ -71,8 +71,8 @@ fun VistaRecordatorios(navController: NavController, idRecordatorio: String?) {
             onClick = {
                 navController?.navigate(Screen.AgregarRecordatorio.withArgs(idRecordatorio!!))
             },
-            backgroundColor = MaterialTheme.colors.secondary,
-            contentColor = Color.Black
+            backgroundColor = Color.Cyan,
+            contentColor = Color.White
         ) {
             Icon(Icons.Filled.Add,"")
         }

@@ -47,6 +47,4 @@ fun DetalleMedia(navController: NavController, url : String?) {
     *
      */
     
-    Text(text = "testing...")
-    
 }

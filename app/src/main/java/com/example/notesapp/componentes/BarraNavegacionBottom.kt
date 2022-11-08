@@ -2,9 +2,7 @@ package com.example.notesapp.componentes
 
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.DateRange
-import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
@@ -19,11 +17,11 @@ fun BarraNavegacionBottom(navController: NavController?) {
         Screen.MainScreen.route
     )
     BottomNavigation(
-        backgroundColor = MaterialTheme.colors.primary,
+        backgroundColor = Color.Cyan,
         contentColor = Color.White
     ) {
         BottomNavigationItem(
-            label = { Text(text = "Todos") },
+            label = { Text(text = "Home") },
             selected = true,
             onClick = { navController?.navigate(Screen.MainScreen.route) },
             icon = {Icon(Icons.Filled.Home,"")}
@@ -32,7 +30,7 @@ fun BarraNavegacionBottom(navController: NavController?) {
             label = { Text(text = "Notas") },
             selected = true,
             onClick = { navController?.navigate(Screen.VistaNotas.route) },
-            icon = {Icon(Icons.Filled.Check,"")}
+            icon = {Icon(Icons.Filled.CheckCircle,"")}
         )
         BottomNavigationItem(
             label = { Text(text = "Tareas") },

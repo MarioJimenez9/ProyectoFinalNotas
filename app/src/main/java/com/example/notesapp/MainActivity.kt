@@ -14,29 +14,21 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.notesapp.datos.NotasDatabase
-import com.example.notesapp.ui.theme.NotesAppTheme
-import com.example.notesapp.utils.foregroundStartService
 import java.util.*
 
 class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //foregroundStartService("Start","hi there")
         Timer().scheduleAtFixedRate(object : TimerTask() {
             override fun run() {
-                //foregroundStartService("Start","Prueba")
-                //Toast.makeText(this,"Clicked in Notifications", Toast.LENGTH_SHORT).show()
                 checarNotificaciones()
             }
         }, 0, 60000)
         setContent {
-            NotesAppTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     Navigation()
                 }
-            }
         }
     }
 
@@ -76,14 +68,6 @@ class MainActivity : ComponentActivity() {
                     //Toast.makeText(this, minute.toString() + ":" , Toast.LENGTH_SHORT).show()
                 }
 
-                //Log.e("miDebug",year + "")
-                //Log.e("miDebug",month)
-                //Log.e("miDebug",day)
-                //Log.e("miDebug", nota.titulo + " - " + hour + ":" + minute)
-
-                //Log.e("miDebug",startYear.toString() + "/" + startMonth + "/" + startDay + " - " + startHour + ":" + startMinute)
-                //Log.e("miDebug",year.toString() + "/" + month.toString() + "/" + day.toString() + " -> "+ hour.toString() + ":" + minute.toString())
-
                 if(
                     year == startYear &&
                     month == startMonth &&
@@ -91,9 +75,6 @@ class MainActivity : ComponentActivity() {
                     hour == startHour &&
                     minute == startMinute
                 ){
-                    Log.e("miDebug","llegue aqui")
-                    foregroundStartService("Start",nota.titulo)
-                    //Toast.makeText(this, minute.toString() + ":" , Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -111,7 +92,5 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    NotesAppTheme {
-        Greeting("Android")
-    }
+
 }

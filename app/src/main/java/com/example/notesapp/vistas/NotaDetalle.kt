@@ -107,8 +107,8 @@ fun NotaDetalle (navController: NavController?){
                 Toast.makeText(context, msgAdd , Toast.LENGTH_SHORT).show()
                 navController?.navigate(Screen.MainScreen.route)
             },
-            backgroundColor = MaterialTheme.colors.secondary,
-            contentColor = Color.Black
+            backgroundColor = Color.Cyan,
+            contentColor = Color.White
         ) {
             Icon(Icons.Filled.Check,"")
         }

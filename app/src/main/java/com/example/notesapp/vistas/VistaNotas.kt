@@ -1,6 +1,5 @@
 package com.example.notesapp.vistas
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -20,8 +19,6 @@ import com.example.notesapp.componentes.BarraNavegacion
 import com.example.notesapp.datos.NotasDatabase
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.sp
 import com.example.notesapp.R
 import com.example.notesapp.componentes.BarraNavegacionBottom
@@ -58,7 +55,7 @@ fun VistaNotas (navController: NavController?, tipo : Int){
                     }
                     .padding(5.dp)
                     ,
-                    color = Color.LightGray,
+                    color = Color.Red,
                     shape = RoundedCornerShape(8.dp),
 
                     ) {
@@ -125,8 +122,8 @@ fun VistaNotas (navController: NavController?, tipo : Int){
             onClick = {
                 navController?.navigate(Screen.DetailScreen.route)
             },
-            backgroundColor = MaterialTheme.colors.secondary,
-            contentColor = Color.Black
+            backgroundColor = Color.Cyan,
+            contentColor = Color.White
         ) {
             Icon(Icons.Filled.Add,"")
         }

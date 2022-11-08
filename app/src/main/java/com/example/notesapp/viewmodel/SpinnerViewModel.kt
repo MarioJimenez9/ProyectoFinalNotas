@@ -3,15 +3,22 @@ package com.example.notesapp.viewmodel
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.notesapp.Fecha
+import java.time.LocalDate
 import java.util.*
 
 class SpinnerViewModel : ViewModel(){
-    var tmpFecha = Fecha(0,0,0,0,0)
+    @RequiresApi(Build.VERSION_CODES.O)
+    var tmpFecha = Fecha(LocalDate.now().year,LocalDate.now().monthValue,LocalDate.now().dayOfMonth + 1,
+        0,0)
+    @RequiresApi(Build.VERSION_CODES.O)
     private val _time = MutableLiveData(tmpFecha)
+    @RequiresApi(Build.VERSION_CODES.O)
     var time : LiveData<Fecha> = _time
 
     fun selectDateTime(context: Context){

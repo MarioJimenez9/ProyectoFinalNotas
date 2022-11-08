@@ -1,7 +1,9 @@
 package com.example.notesapp.vistas
 
 import android.content.Context
+import android.os.Build
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.FloatingActionButton
@@ -36,6 +38,7 @@ import com.example.notesapp.componentes.BarraNavegacionBottom
 import com.example.notesapp.componentes.BarraNavegacionBottomMedia
 import com.example.notesapp.viewmodel.SpinnerViewModel
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun EditarNota (navController: NavController?, id: String?){
 
@@ -96,7 +99,7 @@ fun EditarNota (navController: NavController?, id: String?){
                 modifier = Modifier
                     .fillMaxSize()
                     .fillMaxHeight()
-                    .padding(horizontal = 20.dp, vertical = 20.dp)
+                    .padding(horizontal = 20.dp, vertical = 20.dp),
             ){
                 BasicTextField(
                     value = txtDetalle,
@@ -137,10 +140,8 @@ fun EditarNota (navController: NavController?, id: String?){
             onClick = {
 
                 if(dateTime.value != null){
-                    if(dateTime.value!!.imprimir() != "0/0/0 - 0:0") {
-                        fechaLimite = dateTime.value!!.imprimir()
-                        esTarea = true
-                    }
+                    fechaLimite = dateTime.value!!.imprimir()
+                    esTarea = true
                 }
 
                 val nota = Nota( id = idLong, titulo =  txtTitulo, descripcion = txtDetalle,esTarea,fechaLimite)
@@ -148,8 +149,8 @@ fun EditarNota (navController: NavController?, id: String?){
                 Toast.makeText(context, msgUpdated , Toast.LENGTH_SHORT).show()
                 navController?.navigate(Screen.MainScreen.route)
             },
-            backgroundColor = MaterialTheme.colors.secondary,
-            contentColor = Color.Black
+            backgroundColor = Color.Cyan,
+            contentColor = Color.White
         ) {
             Icon(Icons.Filled.Check,"")
         }

@@ -18,20 +18,15 @@ fun BarraNavegacionBottomMedia(
         Screen.MainScreen.route
     )
     BottomNavigation(
-        backgroundColor = MaterialTheme.colors.primary,
+        backgroundColor = Color.Cyan,
         contentColor = Color.White
     ) {
+
         BottomNavigationItem(
-            label = { Text(text = "Media") },
-            selected = true,
-            onClick = { navController?.navigate(Screen.VistaMedia.withArgs(id)) },
-            icon = { Icon(Icons.Filled.PlayArrow,"") }
-        )
-        BottomNavigationItem(
-            label = { Text(text = "Recordatorios") },
+            label = { Text(text = "Nuevo Recordatorio") },
             selected = true,
             onClick = { navController?.navigate(Screen.VistaRecordatorios.withArgs(id)) },
-            icon = { Icon(Icons.Filled.Home,"") }
+            icon = { Icon(Icons.Filled.Favorite,"") }
         )
     }
 }
