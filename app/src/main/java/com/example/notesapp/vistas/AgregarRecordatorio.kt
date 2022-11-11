@@ -1,5 +1,7 @@
 package com.example.notesapp.vistas
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -17,6 +19,7 @@ import com.example.notesapp.datos.NotasDatabase
 import com.example.notesapp.datos.Recordatorio
 import com.example.notesapp.viewmodel.SpinnerViewModel
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun AgregarRecordatorio(navController: NavController, id : String) {
 

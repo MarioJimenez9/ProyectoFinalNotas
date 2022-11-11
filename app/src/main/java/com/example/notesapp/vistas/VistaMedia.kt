@@ -48,8 +48,6 @@ fun VistaMedia(
     navController: NavController?,
     id: String?
 ) {
-
-    // Estado
     var imageUrl by remember { mutableStateOf<Uri?>(null) }
     var txtDescripcion by remember { mutableStateOf("") }
     val context = LocalContext.current

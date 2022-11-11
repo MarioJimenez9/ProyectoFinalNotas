@@ -13,18 +13,18 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import com.example.notesapp.Screen
 import com.example.notesapp.componentes.BarraNavegacion
 import com.example.notesapp.datos.NotasDatabase
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.notesapp.R
 import com.example.notesapp.componentes.BarraNavegacionBottom
 
 @Composable
-fun VistaNotas (navController: NavController?, tipo : Int){
+fun VistaNotas (navController: NavHostController?, tipo: Int){
 
     val contex = LocalContext.current;
     val db = NotasDatabase.getDatabase(contex);
@@ -108,7 +108,9 @@ fun VistaNotas (navController: NavController?, tipo : Int){
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom,
     ) {
-        BarraNavegacionBottom(navController = navController)
+        if (navController != null) {
+            BarraNavegacionBottom(navController = navController)
+        }
     }
     Column(
         modifier = Modifier

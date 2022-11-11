@@ -8,8 +8,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.notesapp.componentes.BarraNavegacion
-import com.example.notesapp.componentes.BarraNavegacionAcciones
 import com.example.notesapp.vistas.*
 
 @RequiresApi(Build.VERSION_CODES.P)

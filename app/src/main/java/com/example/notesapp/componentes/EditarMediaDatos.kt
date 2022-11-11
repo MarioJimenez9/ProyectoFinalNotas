@@ -45,7 +45,7 @@ fun EditarMediaDatos(
 
     //text = txtDesc
 
-    imageUrl?.let {
+    imageUrl.let {
         if (Build.VERSION.SDK_INT < 28) {
             bitmap.value = MediaStore.Images.Media.getBitmap(context.contentResolver, it)
         } else {

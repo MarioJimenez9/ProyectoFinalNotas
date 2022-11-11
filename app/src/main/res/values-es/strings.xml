@@ -13,4 +13,10 @@
     <string name="dialogDelete">¿Estas seguro que quieres eliminar esta nota?</string>
     <string name="deleteTitle">Eliminar</string>
     <string name="updateTitle">Editar</string>
+    <string name="home">Principal</string>
+    <string name="notes">Notas</string>
+    <string name="tasks">Tareas</string>
+    <string name="add_media">Agregar Media</string>
+    <string name="add_reminder">Agregar Recordatorio</string>
+
 </resources>

@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import com.example.notesapp.Screen
 
 @Composable
@@ -23,10 +24,26 @@ fun BarraNavegacionBottomMedia(
     ) {
 
         BottomNavigationItem(
-            label = { Text(text = "Nuevo Recordatorio") },
+            label = { Text(text = "nuevo recordatorio") },
             selected = true,
-            onClick = { navController?.navigate(Screen.VistaRecordatorios.withArgs(id)) },
+            onClick = { navController?.navigate(Screen.VistaRecordatorios.withArgs(id)){
+                popUpTo(navController.graph.findStartDestination().id){
+                    saveState = true
+                }
+                launchSingleTop = true
+            }  },
             icon = { Icon(Icons.Filled.Favorite,"") }
+        )
+        BottomNavigationItem(
+            selected = true,
+            label = { Text(text = "agregar media")},
+            onClick = { navController?.navigate(Screen.VistaMedia.withArgs(id)){
+                popUpTo(navController.graph.findStartDestination().id){
+                    saveState = true
+                }
+                launchSingleTop = true
+            } },
+            icon = { Icon(Icons.Filled.PlayArrow, "") }
         )
     }
 }
