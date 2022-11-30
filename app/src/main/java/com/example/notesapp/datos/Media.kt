@@ -4,11 +4,17 @@ import android.net.Uri
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "media_table")
-data class Media (
+import androidx.room.ColumnInfo
+
+@Entity(
+    tableName = "multimedias"
+)
+data class Media(
     @PrimaryKey(autoGenerate = true)
-    var id : Long = 0L,
-    var idNota : Long = 0L,
-    var url: String,
-    var descripcion : String
-);
+    var idMultimedia: Long = 0L,
+    @ColumnInfo(index = true)
+    var idNota: Long = 0L,
+    var descripcion: String,
+    var ruta: String,
+    var tipo: String
+)

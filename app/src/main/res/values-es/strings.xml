@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Aplicacion de Notas</string>
-    <string name="titulo_recordatorio">Recordatorios</string>
-    <string name="media_top">Multimedia</string>
-    <string name="title">Titulo</string>
-    <string name="type">Escribe algo...</string>
-    <string name="noteAdded">nota agredada exitosamente</string>
-    <string name="noteUpdated">nota actualizada exitosamente</string>
-    <string name="noteDeleted">nota eliminada exitosamente</string>
-    <string name="YES">SI</string>
-    <string name="NO">NO</string>
-    <string name="dialogDelete">¿Estas seguro que quieres eliminar esta nota?</string>
-    <string name="deleteTitle">Eliminar</string>
-    <string name="updateTitle">Editar</string>
-    <string name="home">Principal</string>
-    <string name="notes">Notas</string>
-    <string name="tasks">Tareas</string>
-    <string name="add_media">Agregar Media</string>
-    <string name="add_reminder">Agregar Recordatorio</string>
-
+    <string name="app_name">ProyectoFinal</string>
+    <string name="ID_NOTE">ID nota</string>
+    <string name="MULTIMEDIA">Multimedia</string>
+    <string name="NOTE_DETAILS">Detalles nota</string>
+    <string name="TO_REMINDER">A recordatorios</string>
+    <string name="TO_MULTIMEDIA">A multimedia</string>
+    <string name="REMINDERS">Tareas</string>
+    <string name="NOTE_FROM">Nota del</string>
+    <string name="NOTE">Nota </string>
+    <string name="REMINDER">Recordatorio </string>
+    <string name="NOTES">Notas</string>
+    <string name="ERASE">Borrar</string>
+    <string name="CANCEL">Cancelar</string>
+    <string name="ERASE_REMINDER_QUESTION">¿Seguro que deseas eliminar el recordatorio con fecha </string>
+    <string name="SELECTED_DATE">Fecha seleccionada</string>
+    <string name="DATE">Fecha</string>
+    <string name="ADD_NOTE">Agregar nota</string>
+    <string name="ADD_NOTE_QUESTION">¿Qué desea agregar?</string>
+    <string name="YES">Si</string>
+    <string name="NO">No</string>
+    <string name="ERASE_NOTE_QUESTION">¿Desea eliminar la nota?</string>
+    <string name="TITLE">Titulo</string>
+    <string name="TASK">Tarea</string>
+    <string name="TAKE_PICTURE">Tomar foto</string>
+    <string name="PICTURE">Foto</string>
+    <string name="VIDEO">Video</string>
+    <string name="AUDIO">Audio</string>
+    <string name="ADD_MEDIA">Agregar multimedia</string>
+    <string name="ADD_MEDIA_QUESTION">¿Qué multimedia desea agregar?</string>
 </resources>
