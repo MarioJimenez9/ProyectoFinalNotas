@@ -54,7 +54,7 @@ fun DetailsPicture(multimedia: Media, db: NotasBD) {
     )
     var uriFoto = FileProvider.getUriForFile(
         context,
-        "com.dcerna.proyectofinal",
+        "Mario's-Picture",
         archivo
     )
     if(archivo.exists() && initialBitmap.width==1){

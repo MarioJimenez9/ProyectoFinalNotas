@@ -46,10 +46,6 @@ fun DetailsAudio(multimedia: Media, db: NotasBD, recorder: MediaRecorder, player
         "${multimedia.idMultimedia}.${multimedia.tipo}"
     )
     val archivoExiste = archivo.exists()
-    // 1: No hay archivo
-    // 2: Grabando archivo
-    // 3: Archivo listo para reproducir
-    // 4: Archivo reproduciéndose
     val estadoArchivo = remember {
         mutableStateOf(if(!archivoExiste) 1 else 3)
     }

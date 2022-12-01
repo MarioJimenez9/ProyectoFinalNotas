@@ -123,7 +123,6 @@ fun insertaMultimedia(
     val db = NotasBD.getInstance(context)
     db.DAONotas().save(multimedia)
 
-    // La nota más reciente es la última en la lista
     return db.DAONotas().getMultimediasPorIDNota(idNota).last().idMultimedia
 }
 

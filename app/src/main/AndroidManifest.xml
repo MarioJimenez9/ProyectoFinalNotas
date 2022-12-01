@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <provider
-            android:authorities="com.dcerna.proyectofinal"
+            android:authorities="com.example.notesapp"
             android:name="androidx.core.content.FileProvider"
             android:grantUriPermissions="true"
             android:exported="false">

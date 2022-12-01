@@ -10,6 +10,7 @@ import androidx.room.RoomDatabase
     version = 3,
     exportSchema = false
 )
+
 abstract class NotasBD : RoomDatabase() {
     abstract fun DAONotas(): DAONotas
 

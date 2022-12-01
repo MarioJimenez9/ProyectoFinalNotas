@@ -59,7 +59,7 @@ class MiReceiverAlarma : BroadcastReceiver() {
 
         var intent = Intent(context, MainActivity::class.java).let { intent ->
             intent.putExtra("idNota", nota.idNota)
-            PendingIntent.getActivity(context, (nota.idNota*1000).toInt(), intent, 0)
+            PendingIntent.getActivity(context, (nota.idNota).toInt(), intent, 0)
         }
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_background)

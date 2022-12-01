@@ -55,12 +55,11 @@ fun DetailsVideo(multimedia: Media, db: NotasBD) {
 
     var uriVideo = FileProvider.getUriForFile(
         context,
-        "com.dcerna.proyectofinal",
+        "Mario's-Videos",
         archivo
     )
 
     val launcherExplorador = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) {
-        // Se guardó el contenido de la imagen en la uri especificada
         if(it != null) {
             val contentResolver: ContentResolver = context.contentResolver
             copiaImagen(it, archivo.absolutePath, contentResolver)

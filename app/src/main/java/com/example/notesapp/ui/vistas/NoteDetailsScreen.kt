@@ -40,7 +40,6 @@ import java.util.*
 fun NoteDetailsScreen(navController: NavController, noteID: String) {
     Surface(color = MaterialTheme.colors.background) {
         NoteDetails(noteID, navController)
-        //    EjemploDialogos()
     }
 }
 
@@ -153,7 +152,7 @@ fun NoteDetails(noteID: String, navController: NavController) {
                 value = textStateTitle.value,
                 onValueChange = { textStateTitle.value = it }
             )
-            Text("${stringResource(R.string.NOTE)}: ")
+            Text("${stringResource(R.string.NOTE)} ")
             val textStateNota = remember { mutableStateOf(textNote) }
             TextField(
 
@@ -286,7 +285,7 @@ fun getTimePickerDialogAdd(
             var alarmIntent = Intent(context, MiReceiverAlarma::class.java).let { intent ->
                 intent.putExtra("idNota", nota.idNota)
                 intent.putExtra("esFechaLimite", true)
-                PendingIntent.getBroadcast(context, (nota.idNota*1000).toInt(), intent, 0)
+                PendingIntent.getBroadcast(context, (nota.idNota).toInt(), intent, 0)
             }
             alarmMgr.set(
                 AlarmManager.RTC,
